@@ -2,7 +2,7 @@
 
 Montage :
 
-Réalisez le montage suivant avec simplement un bouton poussoir relié à l’ESP32 par la broche 18 (GPIO 18) comme entrée et la masse (GND). Aucune résistance n’est nécessaire pour assurer le fonctionnement du bouton poussoir car l’ESP32 possède une résistance interne dit de « pull-up » sur la quasi-totalité de ses broches GPIO. A configurer avec la fonction **pinMode(Pin, INPUT\_PULLUP)** afin de ne pas laisser la broche dans un état flottant indéterminé. Le mode Pull-up câble une résistance interne entre la broche considérée et la broche d’alimentation de l’ESP32. L’appui sur le bouton-poussoir entraîne des rebonds d’où un nombre d’appuis recensé plus élevé que la réalité. Différentes techniques permettent d’y remédier quelque peu logiciellement, par exemple en ajoutant un petit retard ( delay(250) ). L’appui sur le bouton entraîne un état logique 0 sur la broche GPIO.&#x20;
+Réalisez le montage suivant avec simplement un bouton poussoir relié à l’ESP32 par la broche 18 (GPIO 18) comme entrée et la masse (GND). Aucune résistance n’est nécessaire pour assurer le fonctionnement du bouton poussoir car l’ESP32 possède une résistance interne dit de « pull-up » sur la quasi-totalité de ses broches GPIO. A configurer avec la fonction **pinMode(Pin, INPUT\_PULLUP)** afin de ne pas laisser la broche dans un état flottant indéterminé. Le mode Pull-up câble une résistance interne entre la broche considérée et la broche d’alimentation de l’ESP32. L’appui sur le bouton-poussoir entraîne des rebonds d’où un nombre d’appuis recensé plus élevé que la réalité. Différentes techniques permettent d’y remédier quelque peu logiciellement, par exemple en ajoutant un petit retard ( delay(250) ). L’appui sur le bouton entraîne un état logique 0 sur la broche GPIO.
 
 Pour plus de détail, voir la référence : [https://projetsdiy.fr/esp32-entrees-sorties-numeriques-gpio-code-arduino/](https://projetsdiy.fr/esp32-entrees-sorties-numeriques-gpio-code-arduino/) .
 
@@ -16,7 +16,6 @@ struct Button {
   uint32_t numberKeyPresses;
   bool pressed;
 };
-
 ```
 
 Une structure est une collection de variables de types différents sous un même nom.
@@ -70,11 +69,10 @@ void loop() {
 	Serial.println("Interrupt Detached!");
   }
 }
-
 ```
 
 **Comprendre le code de l’exemple, puis téléversez-le dans l’ESP32.**
 
 Pour aller plus loin, voir et comprendre l’exemple GPIOInterrupt.ino dans le menu de l’IDE Arduino :
 
-Fichiers **** -> Exemples -> ESP32 -> GPIO -> GPIOInterrupt.ino
+Fichiers -> Exemples -> ESP32 -> GPIO -> GPIOInterrupt.ino
