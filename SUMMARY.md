@@ -10,3 +10,4 @@
 * [Exemple avec un watchdog](exemple-avec-un-watchdog.md)
 * [Usage du watchdog](usage-du-watchdog.md)
 * [Exercice watchdog](exercice-watchdog.md)
+* [Exercice machine à états avec Touch](exercice-machine-a-etats-avec-touch.md)
