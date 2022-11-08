@@ -6,7 +6,7 @@ Réalisez le montage suivant avec simplement un bouton poussoir relié à l’ES
 
 Pour plus de détail, voir la référence : [https://projetsdiy.fr/esp32-entrees-sorties-numeriques-gpio-code-arduino/](https://projetsdiy.fr/esp32-entrees-sorties-numeriques-gpio-code-arduino/) .
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Créer un bouton-poussoir à l’aide d’une structure appelé Button :
 

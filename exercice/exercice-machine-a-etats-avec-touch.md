@@ -12,11 +12,11 @@ Enfin, avec le troisième fil, vous retournez à l’état ou la LED bleue clign
 
 Voir les exemples précédents. **Réfléchir à la structure de votre code avant de programmer**.
 
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Trois fils pour le montage : touch1 à GPIO13, touch2 à GPIO12, touch3 à GPIO14
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Vous avez 3 états :
 
@@ -28,4 +28,4 @@ Pour changer d’états, vous avez 3 transitions réalisées par 3 fils à 3 bro
 
 Fonctions utiles : touchAttachInterrupt(), timerBegin(), timerAttachInterrupt(), timerAlarmWriter(), timerAlarmEnable(), void IRAM\_ATTR onTimer().
 
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption><p>Photo d'illustration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Photo d'illustration</p></figcaption></figure>

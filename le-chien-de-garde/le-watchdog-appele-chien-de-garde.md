@@ -14,7 +14,7 @@ L’ESP32 dispose de 2 types de watchdogs :
 
 Le watchdog d’interruption est responsable de la détection des cas où la commutation des tâches de FreeRTOS est bloquée pendant une période prolongée. Sans commutation, aucune autre tâche ne peut être exécutée, comme la tâche Wifi par exemple, car elle ne peut pas obtenir du temps CPU pour son exécution. Ce cas de figure se produit quand un programme est exécuté dans une boucle infinie avec des interruptions désactivées ou bien « coincé » dans une interruption. Dans un environnement de production, on préférera faire un reset de l’ESP32. Travail du IWDT :
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Le watchdog de tâches (TWDT) est chargé de détecter les cas de tâches exécutées sans qu’il y ait la moindre modification de programme pendant une période prolongée, autrement dit des tâches « inactives », des tâches coincées dans des boucles infinies. Il faudra définir les tâches que le TWDT devra surveiller. Chaque tâche peut être individuellement remise à zéro (reset).
 
