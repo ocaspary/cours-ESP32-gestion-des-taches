@@ -22,31 +22,21 @@ Autrement dit, les watchdogs jouent un rôle important dans la stabilité de l�
 
 Vérifiez que vous ne restez pas trop longtemps dans la boucle **loop()** de votre programme pour l’ESP32 (IDE Arduino). En effet, quand vous la quittez pour y rentrer à nouveau, le logiciel qui gère votre ESP32 effectue plusieurs tâches en arrière-plan et réinitialise votre watchdog timer d’interruption (IWDT).
 
-Au niveau du code, ne jamais écrire :
-
+```
+// Au niveau du code, ne jamais écrire :
 void loop() {
-
-&#x20; while(1) {
-
-&#x20;   do\_some\_work();
-
-&#x20; }
-
+  while(1) {
+    do_some_work();
+  }
 }
 
-
-
-Mais écrire :
-
+// Mais écrire :
 void loop() {
-
-&#x20; do\_some\_work();
-
+  do_some_work();
 }
+```
 
-&#x20;
-
-Et si vous devez vraiment faire plus de travail dans la boucle **loop()**, et que le temporisateur de surveillance (watchdog timer) le permet, assurez-vous d’appeler de temps en temps les fonctions **yield()** ou **delay()**, qui « nourrissent » le chien de garde et donc remettent à zéro le timer WDT. Sinon, quand le temporisateur du watchdog arrive à zéro, un reset se produira.
+&#x20;Et si vous devez vraiment faire plus de travail dans la boucle **loop()**, et que le temporisateur de surveillance (watchdog timer) le permet, assurez-vous d’appeler de temps en temps les fonctions **yield()** ou **delay()**, qui « nourrissent » le chien de garde et donc remettent à zéro le timer WDT. Sinon, quand le temporisateur du watchdog arrive à zéro, un reset se produira.
 
 Exemple intéressant de mise en œuvre du WDT, voir le programme ci-après et l’explication :
 
